@@ -1,3 +1,5 @@
+(ns garden)
+
 (def default-students ["Alice" "Bob" "Charlie" "David" "Eve" "Fred" "Ginny"
                        "Harriet" "Ileana" "Joseph" "Kincaid" "Larry"])
 

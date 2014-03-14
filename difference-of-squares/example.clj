@@ -1,3 +1,4 @@
+(ns squares)
 
 (defn- sum [xs] (reduce + xs))
 

@@ -22,17 +22,17 @@
        "O O O O O O O O\n"))
 
 (deftest handles-empty-board
-  (is (= empty-board (board-string {}))))
+  (is (= empty-board (queens/board-string {}))))
 (deftest build-board
-  (is (= board (board-string {:w [2 4] :b [6 6]}))))
+  (is (= board (queens/board-string {:w [2 4] :b [6 6]}))))
 
 (deftest finds-attack-positions
-  (is (= false (can-attack {:w [2 3] :b [4 7]})))
-  (is (= true  (can-attack {:w [2 4] :b [2 7]})))
-  (is (= true  (can-attack {:w [5 4] :b [2 4]})))
-  (is (= true  (can-attack {:w [1 1] :b [6 6]})))
-  (is (= true  (can-attack {:w [0 6] :b [1 7]})))
-  (is (= true  (can-attack {:w [4 1] :b [6 3]}))))
+  (is (= false (queens/can-attack {:w [2 3] :b [4 7]})))
+  (is (= true  (queens/can-attack {:w [2 4] :b [2 7]})))
+  (is (= true  (queens/can-attack {:w [5 4] :b [2 4]})))
+  (is (= true  (queens/can-attack {:w [1 1] :b [6 6]})))
+  (is (= true  (queens/can-attack {:w [0 6] :b [1 7]})))
+  (is (= true  (queens/can-attack {:w [4 1] :b [6 3]}))))
 
 (run-tests)
 

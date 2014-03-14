@@ -1,3 +1,5 @@
+(ns triangle)
+
 (defn invalid-sides [a b c]
   (let [[a b c] (sort [a b c])]
     (or (<= a 0)

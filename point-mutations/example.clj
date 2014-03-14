@@ -1,5 +1,5 @@
-(ns dna)
-(require '[clojure.string :refer [split]])
+(ns dna
+  (:require [clojure.string :refer [split]]))
 
 (defn- nucleotides
   [strand]

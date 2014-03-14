@@ -9,9 +9,9 @@
 
 (deftest accumulate-squares
   (is (= [1 4 9] (accum/accumulate square [1 2 3]))))
-   
+
 (deftest accumulate-upcases
-  (is (= ["HELLO", "WORLD"] 
+  (is (= ["HELLO", "WORLD"]
          (map to-s (accum/accumulate clojure.string/upper-case ["hello" "world"])))))
 
 (deftest accumulate-reversed-strings
@@ -21,6 +21,5 @@
 (deftest accumulate-recursively
   (is (= [["a1" "a2" "a3"] ["b1" "b2" "b3"] ["c1" "c2" "c3"]]
          (accum/accumulate #(accum/accumulate (fn [n] (str % n)) [1 2 3]) "abc"))))
- 
-(run-tests)
 
+(run-tests)

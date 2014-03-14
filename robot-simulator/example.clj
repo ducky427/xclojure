@@ -1,3 +1,5 @@
+(ns robot)
+
 (def directions [:north :east :south :west])
 
 (defn robot [coordinates bearing]
@@ -39,4 +41,3 @@
       (if (seq remainder)
         (recur remainder next-state)
         next-state))))
-
